@@ -1,4 +1,4 @@
-// WAP C-Program tor DFA that accept the string aababaa
+// WAP for DFA that accept the string aababaa
 
 #include<stdio.h>
 #include<conio.h>
@@ -16,14 +16,16 @@ int main(){
     printf("Enter the string : ");
     scanf("%s",&input);
 
-    res = dfaStaticString(ACCEPTED_STRING, ACCEPTED_LANGUAGE, input);
+    if( DFAAcceptance(ACCEPTED_LANGUAGE, input) == 0){
+        printf("Enter correct language!!");
+        return 0;
+    }
 
-    if(res == 0){
-        printf("\nThe String is rejected");
-    } else if(res == 1){
-        printf("\nThe String is accepted");
-    } else{
-        printf("\nThere is some error!!!");
-    }  
+    res = dfaStaticString(ACCEPTED_STRING, input);
+
+    if(res == 0) printf("\nThe String is rejected");
+    else if(res == 1) printf("\nThe String is accepted");
+    else printf("\nThere is some error!!!");
+    
     return 0;
 }

@@ -1,18 +1,8 @@
 // Checks acceptance of DFA for string ending with ACCEPTED_STRING
 
-int DFAEndingString(char *stringEnding, char *acceptedLanguage, char *input){
+int DFAEndingString(char *stringEnding, char *input){
     
     int currentState = 0;
-
-    for(int i = 0; i < strlen(input); i++){
-        int checkFlag = 0;
-        for (int j = 0; j < strlen(acceptedLanguage); j++){
-            if(input[i] == acceptedLanguage[j]) {checkFlag = 1;}
-        }
-        if (checkFlag == 0) {
-            return 2;
-        }
-    }
 
     for (int i=0; i<strlen(input); i++){
         if( input[i] == stringEnding[currentState] ){

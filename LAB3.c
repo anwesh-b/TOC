@@ -17,11 +17,15 @@ int main(){
     printf("Enter the string : ");
     scanf("%s",&input);
 
-    res = DFAEndingString(STRING_ENDING, ACCEPTED_LANGUAGE, input);
+    if( DFAAcceptance(ACCEPTED_LANGUAGE, input) == 0){
+        printf("Enter correct language!!");
+        return 0;
+    }
+
+    res = DFAEndingString(STRING_ENDING, input);
 
     if (res == 0) printf("The string doesnot end with %s and is not accepted",STRING_ENDING);
     else if (res == 1) printf("The string ends with %s and is accepted",STRING_ENDING);
-    else if (res == 2) printf("Enter correct language!!");
     else printf("Some error!! Debug the code hehe");
 
     return 0;

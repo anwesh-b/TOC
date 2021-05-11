@@ -10,3 +10,5 @@
 #include "DFAStaticString.h"
 
 #include "DFAEndingString.h"
+
+#include "DFAAcceptance.h"
