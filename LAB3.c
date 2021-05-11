@@ -17,7 +17,7 @@ int main(){
     printf("Enter the string : ");
     scanf("%s",&input);
 
-    if( DFAAcceptance(ACCEPTED_LANGUAGE, input) == 0){
+    if( DFALanguageCorrectness(ACCEPTED_LANGUAGE, input) == 0){
         printf("Enter correct language!!");
         return 0;
     }
