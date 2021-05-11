@@ -8,3 +8,5 @@
             int PROGRAM_STATUS
 */
 #include "DFAStaticString.h"
+
+#include "DFAEndingString.h"
