@@ -11,4 +11,6 @@
 
 #include "DFAEndingString.h"
 
-#include "DFAAcceptance.h"
+#include "DFALanguageCorrectness.h"
+
+#include "DFAStartingString.h"
