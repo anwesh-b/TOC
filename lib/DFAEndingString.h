@@ -8,8 +8,8 @@ int DFAEndingString(char *stringEnding, char *input){
         if( input[i] == stringEnding[currentState] ){
             currentState++;
         } else if(currentState > 0) {
-            for(int j=0; j < currentState; j++){
-                if(input[currentState - j] != stringEnding[j] ){
+            for(int j=0; j <= currentState; j++){
+                if(input[i - j] != stringEnding[j] ){
                     currentState = 0;
                     break;
                 }
